@@ -3,71 +3,39 @@ import { Image } from "astro:assets";
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 
-import spotify from "../../assets/logos/spotify.png";
-import slack from "../../assets/logos/slack.png";
-import paypallogo from "../../assets/logos/paypallogo.png";
+import kronospan from "../../assets/logos/kronospan.png";
+import camsan from "../../assets/logos/camsan.png";
+import starwood from "../../assets/logos/starwood.png";
+import kastamonu from "../../assets/logos/kastamonu.png";
+import Yildiz from "../../assets/logos/yildiz.png";
 
 const brands = [
   {
     id: 1,
-    name: "Spotify",
-    logo: spotify,
+    name: "Yildiz Entegre",
+    logo: Yildiz,
   },
   {
     id: 2,
-    name: "Slack",
-    logo: slack,
+    name: "Camsan Ordu",
+    logo: camsan,
   },
   {
     id: 3,
-    name: "Paypal",
-    logo: paypallogo,
+    name: "Kronospan",
+    logo: kronospan,
   },
   {
     id: 4,
-    name: "Spotify",
-    logo: spotify,
+    name: "Kastamonu",
+    logo: kastamonu,
   },
   {
     id: 5,
-    name: "Slack",
-    logo: slack,
+    name: "Starwood",
+    logo: starwood,
   },
-  {
-    id: 6,
-    name: "Paypal",
-    logo: paypallogo,
-  },
-  {
-    id: 7,
-    name: "Spotify",
-    logo: spotify,
-  },
-  {
-    id: 8,
-    name: "Slack",
-    logo: slack,
-  },
-  {
-    id: 9,
-    name: "Paypal",
-    logo: paypallogo,
-  },
-  {
-    id: 10,
-    name: "Spotify",
-    logo: spotify,
-  },
-  {
-    id: 11,
-    name: "Slack",
-    logo: slack,
-  },
-  {
-    id: 12,
-    name: "Paypal",
-    logo: paypallogo,
-  },
+
 ];
 
 export interface Props {
@@ -80,7 +48,7 @@ const { className } = Astro.props;
 <section class=`${className}`>
   <Container className="space-y-8">
     <div class="text-center max-w-3xl mx-auto">
-      <Title>Trusted by leading brands in the industry.</Title>
+      <Title>Our partners in the industry</Title>
     </div>
     <div class="flex justify-center flex-wrap gap-4">
       {
