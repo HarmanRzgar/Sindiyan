@@ -3,44 +3,40 @@ import { Image } from "astro:assets";
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 
-import kronospan from "/src/assets/logos/kronospan.png";
-import camsan from "/src/assets/logos/camsan.png";
-import starwood from "/src/assets/logos/starwood.png";
-import kastamonu from "/src/assets/logos/kastamonu.png";
-import yildiz from "/src/assets/logos/yildiz.png";
+// Use dynamic imports
+const kronospan = await import("../../assets/logos/kronospan.png");
+const camsan = await import("../../assets/logos/camsan.png");
+const starwood = await import("../../assets/logos/starwood.png");
+const kastamonu = await import("../../assets/logos/kastamonu.png");
+const yildiz = await import("../../assets/logos/yildiz.png");
 
 const brands = [
   {
     id: 1,
     name: "Yildiz Entegre",
-    logo: yildiz,
+    logo: yildiz.default,
   },
   {
     id: 2,
     name: "Camsan Ordu",
-    logo: camsan,
+    logo: camsan.default,
   },
   {
     id: 3,
     name: "Kronospan",
-    logo: kronospan,
+    logo: kronospan.default,
   },
   {
     id: 4,
     name: "Kastamonu",
-    logo: kastamonu,
+    logo: kastamonu.default,
   },
   {
     id: 5,
     name: "Starwood",
-    logo: starwood,
+    logo: starwood.default,
   },
-
 ];
-
-export interface Props {
-  className?: string;
-}
 
 const { className } = Astro.props;
 ---
