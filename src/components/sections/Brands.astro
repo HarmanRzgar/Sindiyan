@@ -3,38 +3,38 @@ import { Image } from "astro:assets";
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 
-// Use import.meta.url to resolve paths
-import kronospan from "../../assets/logos/kronospan.png?url";
-import camsan from "../../assets/logos/camsan.png?url";
-import starwood from "../../assets/logos/starwood.png?url";
-import kastamonu from "../../assets/logos/kastamonu.png?url";
-import yildiz from "../../assets/logos/yildiz.png?url";
+// Use dynamic imports
+const kronospan = await import("@assets/logos/kronospan.png");
+const camsan = await import("@assets/logos/camsan.png");
+const starwood = await import("@assets/logos/starwood.png");
+const kastamonu = await import("@assets/logos/kastamonu.png");
+const yildiz = await import("@assets/logos/yildiz.png");
 
 const brands = [
   {
     id: 1,
     name: "Yildiz Entegre",
-    logo: yildiz,
+    logo: yildiz.default,
   },
   {
     id: 2,
     name: "Camsan Ordu",
-    logo: camsan,
+    logo: camsan.default,
   },
   {
     id: 3,
     name: "Kronospan",
-    logo: kronospan,
+    logo: kronospan.default,
   },
   {
     id: 4,
     name: "Kastamonu",
-    logo: kastamonu,
+    logo: kastamonu.default,
   },
   {
     id: 5,
     name: "Starwood",
-    logo: starwood,
+    logo: starwood.default,
   },
 ];
 
@@ -50,7 +50,7 @@ const { className } = Astro.props;
       {
         brands.map((brand) => (
           <div class="p-4 sm:p-5 rounded-xl border border-box-border group bg-box-bg">
-            <img
+            <Image
               src={brand.logo}
               width="100"
               height="60"
