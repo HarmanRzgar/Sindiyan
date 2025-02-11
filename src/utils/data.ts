@@ -1,6 +1,6 @@
-import visibilityDilemma from "../assets/images/visibility-dilemma.jpg";
-import engagementGap from "../assets/images/engagement-gap.jpg";
-import resultsInHibernation from "../assets/images/results-in-hibernation.jpg";
+import visibilityDilemma from "../assets/images/a.jpg";
+import engagementGap from "../assets/images/b.jpg";
+import resultsInHibernation from "../assets/images/d.jpg";
 
 const services = [
   {
